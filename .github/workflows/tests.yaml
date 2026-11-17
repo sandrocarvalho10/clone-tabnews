@@ -2,7 +2,7 @@ name: Automated Tests
 
 on: pull_request
 
-jobs: 
+jobs:
   jest:
     name: Jest Ubuntu
     runs-on: ubuntu-latest
@@ -10,9 +10,9 @@ jobs:
       - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v4
-        with: 
+        with:
           node-versions: "lts/hydrogen"
-      
+
       - run: npm ci
 
       - run: npm test
